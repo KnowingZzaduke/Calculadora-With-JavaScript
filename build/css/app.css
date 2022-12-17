@@ -10,12 +10,12 @@
   color: black;
 }
 
-.contenedor_botones .content_boton-operador {
+.contenedor_botones .contenedor_boton-operador {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem;
 }
-.contenedor_botones .content_boton-operador button {
+.contenedor_botones .contenedor_boton-operador button {
   padding: 5px;
   background-color: #717D7E;
   color: white;
@@ -23,7 +23,7 @@
   width: 60px;
   height: 60px;
 }
-.contenedor_botones .content_boton-operador button:hover {
+.contenedor_botones .contenedor_boton-operador button:hover {
   cursor: pointer;
   background-color: #D5DBDB;
 }
@@ -48,16 +48,25 @@
   cursor: pointer;
   background-color: #D5DBDB;
 }
-.contenedor_botones .contenedor_botones-numero-operador-derecha .content_boton-operador-derecha {
+.contenedor_botones .contenedor_botones-numero-operador-derecha .contenedor_boton-operador-derecha {
   display: grid;
 }
-.contenedor_botones .contenedor_botones-numero-operador-derecha .content_boton-operador-derecha button {
+.contenedor_botones .contenedor_botones-numero-operador-derecha .contenedor_boton-operador-derecha button {
   margin-top: 1rem;
-  height: 100px;
+  height: 160px;
   width: 70px;
 }
-.contenedor_botones .contenedor_botones-numero-operador-derecha .content_boton-operador-derecha button:hover {
+.contenedor_botones .contenedor_botones-numero-operador-derecha .contenedor_boton-operador-derecha button:hover {
   cursor: pointer;
+}
+.contenedor_botones .contenedor_boton-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 175px);
+  gap: 20px;
+  margin-top: 1rem;
+}
+.contenedor_botones .contenedor_boton-footer button {
+  height: 60px;
 }
 
 main {
@@ -96,5 +105,5 @@ div {
 }
 
 button {
-  border: none;
+  border: 1px solid white;
 }
