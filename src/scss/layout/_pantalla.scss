@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+
+.content_calculadora{
+    .content_pantalla{
+        background-color: v.$blanco;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        text-align: end;
+        flex-direction: row-reverse;
+        color: v.$negro;
+    }
+}

@@ -1,0 +1,20 @@
+@use 'variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap');
+
+*,*::before,
+*::after{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Chivo Mono', monospace;
+    display: block;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(228,40,40,1) 100%);
+}
+
+
+div{
+    color: v.$blanco;
+}
