@@ -1,2 +1,36 @@
 @use '../base/variables' as v;
 
+.contenedor_botones{
+    .content_boton-operador{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 1rem;
+
+        button{
+            padding: 5px;
+            background-color: v.$gris;
+            color: v.$blanco;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            
+            &:hover{
+                cursor: pointer;
+                background-color: v.$grisClaro;
+
+            }
+        }
+    }
+
+    .contenedor_botones-numero-operador-derecha{
+        display: flex;
+
+        .contenedor_boton-numero{
+            button{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
