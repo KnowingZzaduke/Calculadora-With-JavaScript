@@ -10,6 +10,32 @@
   color: black;
 }
 
+.contenedor_botones .content_boton-operador {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+}
+.contenedor_botones .content_boton-operador button {
+  padding: 5px;
+  background-color: #717D7E;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.contenedor_botones .content_boton-operador button:hover {
+  cursor: pointer;
+  background-color: #D5DBDB;
+}
+.contenedor_botones .contenedor_botones-numero-operador-derecha {
+  display: flex;
+}
+.contenedor_botones .contenedor_botones-numero-operador-derecha .contenedor_boton-numero button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
 main {
   display: flex;
   align-items: center;
