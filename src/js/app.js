@@ -1,40 +1,44 @@
-window.addEventListener('load', ()=>{
-    const display = document.querySelector('.content_pantalla');
-    const botones = document.getElementsByClassName('button');
+window.addEventListener('load', () =>{
+    const resultado = document.querySelector('.content_pantalla');
+    const botones = document.getElementsByClassName('boton');
 
-    //Variable para convertir nuestro HTMLcollection a un array
+    //Convertimos el HTMLcollection a un array
     const botonesArray = Array.from(botones);
 
     //Iteramos sobre los botones
     botonesArray.forEach((button)=>{
         button.addEventListener('click', ()=>{
-            calculadora(button,display)
-        });
-    });
-});
+            calculadora(button, resultado);
+        })
+    })
+})
 
-//Función calculadora
-function calculadora(button, display){
+function calculadora(button, resultado){
     if(button.innerHTML == 'C'){
-        borrar(display);
+        borrar(resultado);
     }else if(button.innerHTML == '='){
-        calcular(display);
+        calcular(resultado);
     }else{
-        actualizar(display, button);
+        actualizar(button, resultado);
     }
 }
 
-function calcular(display){
-    display.innerHTML = eval(display.innerHTML)
-}
-
-function actualizar(display, button){
-    if(display.innerHTML == 0){
-        display.innerHTML == '';
+//Función Actualizar
+function actualizar(button, resultado){
+    if(resultado.innerHTML == '0'){
+        resultado.innerHTML = '';
     }
-    display.innerHTML = display.innerHTML + button.innerHTML;
+    resultado.innerHTML = button.innerHTML + resultado.innerHTML;
 }
 
-function borrar(display){
-    display.innerHTML == '0';
+function calcular(resultado){
+    resultado.innerHTML = eval(resultado.innerHTML);
 }
+
+function borrar(button, resultado){
+    if(button.innerHTML == '='){
+
+    }
+}
+
+
