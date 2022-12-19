@@ -1,6 +1,6 @@
 window.addEventListener('load', ()=>{
     const display = document.querySelector('.content_pantalla');
-    const botones = document.getElementsByClassName('boton');
+    const botones = document.getElementsByClassName('button');
 
     //Variable para convertir nuestro HTMLcollection a un array
     const botonesArray = Array.from(botones);
