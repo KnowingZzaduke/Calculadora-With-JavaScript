@@ -1,44 +1,40 @@
 window.addEventListener('load', () =>{
-    const resultado = document.querySelector('.content_pantalla');
-    const botones = document.getElementsByClassName('boton');
+    const display = document.querySelector('.content_pantalla');
+    const botones =  document.getElementsByClassName('boton');
+    const sumar = document.querySelector('.sumar');
+    const restar = document.querySelector('.restar');
+    const multiplicar = document.querySelector('.multiplicar');
+    const dividir = document.querySelector('.dividir');
 
-    //Convertimos el HTMLcollection a un array
+    //Convertimos el HTMLCollectio a un array
     const botonesArray = Array.from(botones);
 
-    //Iteramos sobre los botones
-    botonesArray.forEach((button)=>{
-        button.addEventListener('click', ()=>{
-            calculadora(button, resultado);
+    //Iteramos sobre ese arreglo
+    botonesArray.forEach((botones) =>{
+        botones.addEventListener('click', function(){
+            calculadora(botones, display)
         })
     })
 })
 
-function calculadora(button, resultado){
-    if(button.innerHTML == 'C'){
-        borrar(resultado);
-    }else if(button.innerHTML == '='){
-        calcular(resultado);
+function calculadora(botones, display){
+    if(botones.outerText == 'C'){
+        borrar(display);
+    }else if(botones.outerText == '='){
+        calcular(botones, display);
     }else{
-        actualizar(button, resultado);
+        mostrarValores(botones, display);
     }
 }
 
-//Función Actualizar
-function actualizar(button, resultado){
-    if(resultado.innerHTML == '0'){
-        resultado.innerHTML = '';
-    }
-    resultado.innerHTML = button.innerHTML + resultado.innerHTML;
+function mostrarValores(botones, display){
+    display.innerHTML = botones.innerHTML + display.innerHTML;
+};
+
+function calcular(botones, display){
+    
 }
 
-function calcular(resultado){
-    resultado.innerHTML = eval(resultado.innerHTML);
-}
-
-function borrar(button, resultado){
-    if(button.innerHTML == '='){
-
-    }
-}
-
-
+function borrar(display){
+    display.innerHTML = '0';
+};
