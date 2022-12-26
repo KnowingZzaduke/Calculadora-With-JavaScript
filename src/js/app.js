@@ -19,7 +19,6 @@ window.addEventListener('load', () =>{
             borrar(display);
         }else if(botones.outerText == '+'){
             a = display.outerText;
-            console.log(a);
             operacion = '+';
             borrar(display)
         }else if(botones.outerText == '/'){
@@ -37,7 +36,6 @@ window.addEventListener('load', () =>{
         }
         else if(botones.outerText == '='){
             b = display.outerText;
-            console.log(b);
             calcular();
         }else{
             mostrarValores(botones, display);
