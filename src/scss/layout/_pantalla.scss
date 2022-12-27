@@ -16,6 +16,11 @@
             text-align: end;
             flex-direction: row-reverse;
             color: v.$blanco;
+
+            .pantalla{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

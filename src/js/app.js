@@ -4,7 +4,6 @@ window.addEventListener('load', () =>{
     var a;
     var b;
     var operacion;
-    console.log(display);
 
     //Convertimos el HTMLCollectio a un array
     const botonesArray = Array.from(botones);
@@ -79,6 +78,8 @@ window.addEventListener('load', () =>{
             case "%":
                 res = parseFloat(a) % parseFloat(a);
                 break;
+
+                return;
         }
     }
 
@@ -86,6 +87,5 @@ window.addEventListener('load', () =>{
     function borrar(display){
         display.innerHTML = "";
     };
-    
 })
 
