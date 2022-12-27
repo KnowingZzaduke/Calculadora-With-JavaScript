@@ -4,6 +4,7 @@ window.addEventListener('load', () =>{
     var a;
     var b;
     var operacion;
+    console.log(display);
 
     //Convertimos el HTMLCollectio a un array
     const botonesArray = Array.from(botones);
@@ -48,8 +49,7 @@ window.addEventListener('load', () =>{
     }
     
     function mostrarValores(botones, display){
-        display.innerHTML = botones.innerHTML + display.innerHTML;
-        console.log(display)
+        display.innerHTML = display.innerHTML + botones.innerHTML;
     };
     
     //Función para realizar las operaciones
