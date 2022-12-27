@@ -1,23 +1,41 @@
 @use '../base/variables' as v;
 
 .contenedor_botones{
+    justify-content: center;
+    text-align: center;
     .contenedor_boton-operador{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin-top: 1rem;
-
+        
         button{
+            margin: 0% auto;
             padding: 5px;
-            background-color: v.$gris;
+            background-color: transparent;
             color: v.$blanco;
-            border-radius: 50%;
             width: 60px;
             height: 60px;
+            border: 3px solid v.$azulMarino;
+            border-color: v.$azulMarino;
+            box-shadow: 0 0 10px 1px v.$azulMarino;
+            font-weight: 900;
+            font-size: 1.3rem;
             
             &:hover{
                 cursor: pointer;
-                background-color: v.$grisClaro;
+                background-color: v.$azulMarino;
+                border: 5px;
+                box-shadow: 0 0 15px 1px v.$azulMarino;
+            }
+        }
 
+        :first-child{
+            border-color: red;
+            box-shadow: 0 0 10px 1px red;
+
+            &:hover{
+                box-shadow: 0 0 15px 1px red;
+                background-color: red;
             }
         }
     }
@@ -29,47 +47,93 @@
 
         .contenedor_boton-numero{
             display: grid;
-            grid-template-columns: repeat(3, 100px);
+            grid-template-columns: repeat(3, 110px);
+    
             button{
+                margin: 0% auto;
+                padding: 5px;
+                background-color: transparent;
+                color: v.$blanco;
                 width: 60px;
                 height: 60px;
-                border-radius: 50%;
-                margin-top: 1rem;
-                background-color: v.$gris;
-                color: v.$blanco;
-
+                border: 3px solid v.$azulMarino;
+                border-color: v.$azulMarino;
+                box-shadow: 0 0 10px 1px v.$azulMarino;
+                font-weight: 900;
+                font-size: 1.3rem;
+                
                 &:hover{
                     cursor: pointer;
-                    background-color: v.$grisClaro;
-                }
+                    background-color: v.$azulMarino;
+                    border: 5px;
+                    box-shadow: 0 0 15px 1px v.$azulMarino;
+            }
             }
         }
 
         .contenedor_boton-operador-derecha{
             display: grid;
+            :last-child{
+                margin-top: 10px;
+                height: 120px;
+            }
 
             button{
-                margin-top: 1rem;
-                height: 160px;
-                width: 70px;
+                margin: 0% auto;
+                height: 80px;
+                width: 60px;
+                background-color: transparent;
+                border: 3px solid v.$azulMarino;
+                border-color: v.$azulMarino;
+                box-shadow: 0 0 10px 1px v.$azulMarino;
+                font-weight: 900;
+                font-size: 1.3rem;
+                color: v.$blanco;
 
                 &:hover{
                     cursor: pointer;
+                    background-color: v.$azulMarino;
+                    border: 5px;
+                    box-shadow: 0 0 15px 1px v.$azulMarino;
                 }
+            }
+
+            :last-child{
+                border-color: v.$amarillo;
+                box-shadow: 0 0 10px 1px v.$amarillo;
+
+                &:hover{    
+                    background-color: v.$amarillo;
+                    box-shadow: 0 0 15px 1px v.$amarillo
+                }
+
             }
         }
     }
 
     .contenedor_boton-footer{
-        display: grid;
-        grid-template-columns: repeat(2, 175px);
-        gap: 20px;
+        display: flex;
         margin-top: 1rem;
 
         button{
             height: 60px;
+            margin: 0% auto;
+            width: 120px;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            border: 3px solid v.$azulMarino;
+            border-color: v.$azulMarino;
+            box-shadow: 0 0 10px 1px v.$azulMarino;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: v.$blanco;
 
+            &:hover{
+                cursor: pointer;
+                background-color: v.$azulMarino;
+                border: 5px;
+                box-shadow: 0 0 15px 1px v.$azulMarino;
+            }
         }
-
     }
 }

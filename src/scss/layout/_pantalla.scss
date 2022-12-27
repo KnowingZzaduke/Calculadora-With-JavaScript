@@ -1,14 +1,21 @@
 @use '../base/variables' as v;
 
 .content_calculadora{
-    .content_pantalla{
-        background-color: v.$blanco;
-        height: 50px;
-        display: flex;
-        align-items: center;
+    .encabezado_calculadora{
+        border: solid v.$negro;
         border-radius: 5px;
-        text-align: end;
-        flex-direction: row-reverse;
-        color: v.$negro;
+        .content_pantalla{
+            background-color: transparent;
+            margin: 10px;
+            height: 50px;
+            box-shadow: 0 0 10px 1px v.$negro;
+            border: 5px solid v.$negro;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            text-align: end;
+            flex-direction: row-reverse;
+            color: v.$blanco;
+        }
     }
 }

@@ -5,15 +5,15 @@ main{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    border-radius: 5px;
 
     .content_calculadora{
-        padding: 20px;
-        background-color: v.$blanco;
-        border: 1px solid v.$negro;
+        background-color: transparent;
+        border: 6px solid v.$azulMarino;
         opacity: 50%;
-        width: 400px;
+        width: 440px;
         margin: 0% auto;
         border-radius: 5px;
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,228,220,1) 100%);    }
+        box-shadow: 0 0 30px 1px v.$negro;
+    }
 }

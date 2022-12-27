@@ -33,6 +33,11 @@ window.addEventListener('load', () =>{
             a = display.outerText;
             operacion = '*';
             borrar(display);
+        }else if(botones.outerText == '%'){
+            a = display.outerText;
+            operacion = '%';
+            mostrarValores(botones, display);
+            calcular();
         }
         else if(botones.outerText == '='){
             b = display.outerText;
@@ -43,7 +48,8 @@ window.addEventListener('load', () =>{
     }
     
     function mostrarValores(botones, display){
-        display.innerHTML = botones.innerHTML
+        display.innerHTML = botones.innerHTML + display.innerHTML;
+        console.log(display)
     };
     
     //Función para realizar las operaciones
@@ -69,6 +75,10 @@ window.addEventListener('load', () =>{
                 res = parseFloat(a) - parseFloat(b);
                 display.innerHTML = res;
             break;
+            
+            case "%":
+                res = parseFloat(a) % parseFloat(a);
+                break;
         }
     }
 
