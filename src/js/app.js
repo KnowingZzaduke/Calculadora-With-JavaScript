@@ -5,8 +5,6 @@ window.addEventListener('load', () =>{
     let b;
     let operacion;
 
-    document.getElementById
-
     //Convertimos el HTMLCollectio a un array
     const botonesArray = Array.from(botones);
     //Iteramos sobre ese arreglo
