@@ -1,9 +1,11 @@
 window.addEventListener('load', () =>{
-    let display = document.querySelector('.content_pantalla');
+    const display = document.querySelector('.content_pantalla');
     const botones =  document.getElementsByClassName('boton');
-    var a;
-    var b;
-    var operacion;
+    let a;
+    let b;
+    let operacion;
+
+    document.getElementById
 
     //Convertimos el HTMLCollectio a un array
     const botonesArray = Array.from(botones);
@@ -14,36 +16,44 @@ window.addEventListener('load', () =>{
         })
     })
 
+    //Función encargada de calcular
     function calculadora(botones, display){
-        if(botones.outerText == 'C'){
-            borrar(display);
-        }else if(botones.outerText == '+'){
-            a = display.outerText;
-            operacion = '+';
-            borrar(display)
-        }else if(botones.outerText == '/'){
-            a = display.outerText;
-            operacion = '/';
-            borrar(display);
-        }else if(botones.outerText == '-'){
-            a = display.outerText;
-            operacion = '-';
-            borrar(display);
-        }else if(botones.outerText == '*'){
-            a = display.outerText;
-            operacion = '*';
-            borrar(display);
-        }else if(botones.outerText == '%'){
-            a = display.outerText;
-            operacion = '%';
-            mostrarValores(botones, display);
-            calcular();
-        }
-        else if(botones.outerText == '='){
-            b = display.outerText;
-            calcular();
-        }else{
-            mostrarValores(botones, display);
+        switch(botones.outerText){
+            case "C":
+                borrar(display);
+                break;
+            
+            case "+":
+                a = display.outerText;
+                console.log(a)
+                operacion = "+";
+                borrar(display);
+                break;
+            
+            case "-":
+                a = display.outerText;
+                operacion = "-";
+                borrar(display);
+                break;
+
+            case "/":
+                a = display.outerText;
+                operacion = "/";
+                borrar(display);
+                break;
+
+            case "*":
+                a = display.outerText;
+                operacion = "*";
+                borrar(display);
+                break;
+
+            case "=":
+                b = display.outerText;
+                calcular();
+    
+            default:
+                mostrarValores(botones, display);
         }
     }
     
@@ -75,11 +85,8 @@ window.addEventListener('load', () =>{
                 display.innerHTML = res;
             break;
             
-            case "%":
-                res = parseFloat(a) % parseFloat(a);
-                break;
-
-                return;
+            default:
+                display.innerHTML = "Syntax Error";
         }
     }
 
