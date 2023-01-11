@@ -22,32 +22,37 @@ window.addEventListener('load', () =>{
                 break;
             
             case "+":
-                a = display.outerText;
-                console.log(a)
+                a = display.textContent
                 operacion = "+";
                 borrar(display);
                 break;
             
             case "-":
-                a = display.outerText;
+                a = display.textContent
                 operacion = "-";
                 borrar(display);
                 break;
 
             case "/":
-                a = display.outerText;
+                a = display.textContent
                 operacion = "/";
                 borrar(display);
                 break;
 
             case "*":
-                a = display.outerText;
+                a = display.textContent
                 operacion = "*";
                 borrar(display);
                 break;
 
+            case "%":
+                a = display.textContent;
+                operacion = "%";
+                borrar(display);
+                break;
+
             case "=":
-                b = display.outerText;
+                b = display.textContent
                 calcular();
     
             default:
@@ -56,7 +61,11 @@ window.addEventListener('load', () =>{
     }
     
     function mostrarValores(botones, display){
-        display.innerHTML = display.innerHTML + botones.innerHTML;
+        if(botones.outerText == "="){
+            delete(botones.outerText);
+        }else{
+            display.innerHTML =  display.outerText + botones.outerText;
+        }
     };
     
     //Función para realizar las operaciones
@@ -82,6 +91,11 @@ window.addEventListener('load', () =>{
                 res = parseFloat(a) - parseFloat(b);
                 display.innerHTML = res;
             break;
+
+            case "%":
+                res = parseFloat(a) % parseFloat(b);
+                display.innerHTML = res;
+                break;
             
             default:
                 display.innerHTML = "Syntax Error";
@@ -93,4 +107,5 @@ window.addEventListener('load', () =>{
         display.innerHTML = "";
     };
 })
+
 
