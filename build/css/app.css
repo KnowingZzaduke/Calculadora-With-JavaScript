@@ -143,11 +143,20 @@
 }
 
 main {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   border-radius: 5px;
+}
+main .content_titulo-calculadora {
+  margin: 3rem 0 3rem 0;
+}
+main .content_titulo-calculadora h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  width: 50%;
+  margin: 0% auto;
+  text-align: center;
 }
 main .content_calculadora {
   background-color: transparent;
